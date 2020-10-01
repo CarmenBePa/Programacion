@@ -33,9 +33,7 @@ public class SegundosAMinutos {
 		
 		System.out.println("Y " + horas + " horas corresponden a " + dia + " dias y sobran " + resto3 + " horas.");
 		
-		System.out.println("En conclusion, " + seg + " segundos corresponderian a " + dia + " dias, " + horas + " horas, " + min + " minutos y sobrarian " + resto + " segundos.");
-		
-		
+		System.out.println("En conclusion, " + seg + " segundos corresponderian a " + dia + " dias, " + horas + " horas, " + min + " minutos y sobrarian " + resto + " segundos.");	
 		
 	}
 
