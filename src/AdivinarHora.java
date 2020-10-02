@@ -1,4 +1,3 @@
-import java.util.Scanner;
 public class AdivinarHora {
 
 	public static void main(String[] args) {
@@ -21,7 +20,6 @@ public class AdivinarHora {
 	
 	System.out.println("La hora actual es " + ( horaAct + 2) + ":" + minAct + ":" + segAct);
 		
-	
 	}
 
 }
