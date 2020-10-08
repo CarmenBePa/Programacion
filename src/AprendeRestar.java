@@ -22,6 +22,7 @@ public class AprendeRestar {
 				else
 					System.out.println("Vaya, has fallado. Prueba de nuevo.");
 		}
+		
 		else
 				if (num1 < num2)
 					System.out.println("Vamos a aprender a Restar. ¿Cuanto es " + num2 + " - " + num1 + " ?" );
