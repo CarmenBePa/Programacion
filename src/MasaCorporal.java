@@ -15,18 +15,18 @@ public class MasaCorporal {
 		double altura = input.nextDouble();
 		
 		
-		int pesoFinal = (int)(peso);
-		int alturaFinal = (int)(altura);
+		//int pesoFinal = (int)(peso*10);
+		//int alturaFinal = (int)(altura*10);
 		
-		int indice = pesoFinal / (alturaFinal^2);
+		double indice = peso / Math.pow(altura,2);
 		
 		System.out.println("Tu indice de masa corportal es: " + indice );
 			if(indice < 18.5)
 				System.out.println("Tu peso esta por debajo de lo normal");
 			else if (indice >= 18.5 && indice < 25.0)
 				System.out.println("Tienes un peso dentro de la media");
-			else if (indice >= 25.0 && indice < 30.0)
-				System.out.println("Tienes sobrepeso");
+			//else if (indice >= 25.0 && indice < 30.0)
+				//System.out.println("Tienes sobrepeso");
 			else if (indice >= 30.0)
 				System.out.println("Tienes obesidad");
 		
