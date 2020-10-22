@@ -19,10 +19,10 @@ public class AdivinaNumero {
 					user = input.nextInt();	
 				    }
 				
-					else {
-					System.out.println("El numero del PC es menor. Elige un numero mas bajo");
-					user = input.nextInt();
-					}
+				else if (user > aleatorio) {
+				System.out.println("El numero del PC es menor. Elige un numero mas bajo");
+				user = input.nextInt();
+				}
 				
 			 intentos++;
 			}
