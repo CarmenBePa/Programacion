@@ -10,7 +10,7 @@ public class PrecioMatricula {
 		int año = 0;
 		
 		while (matricula<20000) {
-			matricula = (matricula * 1.07);
+			matricula = (matricula * 1.07);//matricula = matricula + matricula*0.07
 			año++;
 		}
 		
