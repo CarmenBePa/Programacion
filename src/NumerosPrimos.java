@@ -14,11 +14,8 @@ public class NumerosPrimos {
 		while (divisor <= (numero/2) && (numero % divisor != 0)) 
 			divisor++;
 			
-		
-
 			if (numero % divisor == 0) 
-				System.out.println("El numero " + numero + " no es primo ");
-				
+				System.out.println("El numero " + numero + " no es primo ");	
 			else
 			System.out.println("El numero " + numero + " es primo");	
 	}
