@@ -9,6 +9,7 @@ public class menuMetodos {
 		int opcion = 0;
 		int n;
 		int n1;
+		int num;
 
 		do {
 			opcion = menu();
@@ -51,11 +52,22 @@ public class menuMetodos {
 				System.out.println("Numero decimal: ");
 				n = input.nextInt();
 
-				System.out.println(n + " decimal seria " + conversor(n) + " en hexadecimal");
+				System.out.println(n + " decimal seria " + conversorDEC(n) + " en hexadecimal");
+				
+				break;
+				
+			case 5:
+				System.out.println("Introduce un numero hexadecimal para transformarlo en decimal.");
+				System.out.println("Numero hexadecimal: ");
+				String hex = input.next();
+				
+				System.out.println(hex + " hexadecimal seria " + conversorHex(hex) + " en decimal." );
+				
+				break;
 
 			}
 
-		} while (opcion != 5);
+		} while (opcion != 6);
 		System.out.println("¡Hasta pronto!");
 
 	}
@@ -89,7 +101,7 @@ public class menuMetodos {
 		return d;
 	}
 
-	public static String conversor(int decimal) {
+	public static String conversorDEC(int decimal) {
 		String hex = "";
 
 		while (decimal != 0) {
@@ -99,7 +111,8 @@ public class menuMetodos {
 
 			if (0 <= valorHex && valorHex <= 9) {
 				numHex = (char) (valorHex + '0');
-			} else
+			}
+			else
 				numHex = (char) (valorHex - 10 + 'A');
 
 			hex = numHex + hex;
@@ -108,16 +121,41 @@ public class menuMetodos {
 		return hex;
 	}
 
+	public static int conversorHex(String hex) {
+		int decimal = 0;
+		hex = hex.toUpperCase();
+		int mayor = hex.length();
+		
+		for (int i = 0; i <= mayor; i++) {
+			char caracter = hex.charAt(i);
+			int digito;
+			
+			if (caracter >= '0' && caracter <= '9')
+				digito = caracter - '0';
+			else if (caracter >= 'A' && caracter <= 'F')
+				digito = caracter - 'A' + 10;
+			else
+				return 0;
+			decimal += digito * Math.pow(16, (mayor-i));
+		}
+		
+		return decimal;
+		
+	}
+	
+	
 	public static int menu() {
 		int opcion;
 		Scanner input = new Scanner(System.in);
+		System.out.println("");
 		System.out.println(" Menu ");
 		System.out.println("---------------");
-		System.out.println("1.- Calcular si un numero es primo o no");
-		System.out.println("2.- Calcular si un numero es par o no");
-		System.out.println("3.- Calcular el MCD de dos numeros");
-		System.out.println("4.- Pasar un numero de decima a Hexadecimal");
-		System.out.println("5.- Salir");
+		System.out.println("1.- Calcular si un numero es primo o no.");
+		System.out.println("2.- Calcular si un numero es par o no.");
+		System.out.println("3.- Calcular el MCD de dos numeros.");
+		System.out.println("4.- Pasar un numero de decima a Hexadecimal.");
+		System.out.println("5.- Pasar un numero de hexadeciaml a decimal.");
+		System.out.println("6.- Salir");
 		System.out.println("---------------");
 		System.out.println("¿Cual eliges?: ");
 		opcion = input.nextInt();
