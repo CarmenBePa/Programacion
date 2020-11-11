@@ -6,27 +6,43 @@ public class MenuAleatorio {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 
-		int c1;
-		int c2;
-		
-		do { 
+		int opcion = 0;
+		int n;
+		int n1;
+		int num;
+
+		do {
 			opcion = menu();
 			switch (opcion) {
-			
 			case 1: 
+				n = 0;
+				System.out.println("El numero aleatorio seleccionado es: " + numRandom(n) );
+				break;
+			
+		
+			case 2:
+				char l = 'l';
+				System.out.println("El caracter elegido es: " + letraRandom(l) );
 			}
+			
+		}while (opcion != 4); 
+		
+	}
+		
+		public static int numRandom (int n) {
+			
+			int num = (int)(Math.random()*10);
+			return num;
 		}
 		
 		
-		
-		
-		public static randomChar (char c1, char c2) {
+		public static char letraRandom (char l) {
+			char letra = (char)(int)(Math.random()*10);
 			
 			
-
+			return letra;
+			
 		}
-		
-		
 		
 		
 		public static int menu() {
