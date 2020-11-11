@@ -27,20 +27,20 @@ public class Calendario {
 	
 	public static void printMes (int año, int mes) {
 		final int PRIMER_DIA = 3;
-		int DiasEnMes = DiasEnMes(mes, año);
+		int numeroDias = DiasEnMes(mes, año);
 		int dias = TotalDias(año, mes);
 		
-		int primerDia = dias % 7 + PRIMER_DIA;
+		int primerDia = (dias + PRIMER_DIA) % 7;
 	//System.out.println("\t");
 		for (int espacio = 1; espacio < primerDia; espacio++)// Imprime espacios hasta el primer dia
-			System.out.println("              ");
+			System.out.println("\t");
 				
 		
-		for (int d = 1; d <= DiasEnMes; d++) {
+		for (int d = 1; d <= numeroDias; d++) {
 			System.out.print(d + "\t");
 			
 			if((d + primerDia) % 7  == 0)
-				System.out.println("\t");
+				System.out.println(" ");
 						
 				
 		}
