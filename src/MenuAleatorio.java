@@ -36,9 +36,9 @@ public class MenuAleatorio {
 		}
 		
 		
-		public static char letraRandom (char l) {
-			char letra = " ";
-			int l = (int) Math.floor(Math.random() * (65 - 90 + 1) + 90);
+		public static String letraRandom (char l) {
+			String letra = " ";
+			int l1 = (int) Math.floor(Math.random() * (65 - 90 + 1) + 90);
 			
 			
 			return letra;
