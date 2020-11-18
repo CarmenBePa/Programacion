@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class menuParaArray {
@@ -7,25 +8,40 @@ public class menuParaArray {
 		Scanner input = new Scanner(System.in);
 
 		int opcion = 0;
+		int array[] = null;
 
 		do {
 			opcion = menu();
 			switch (opcion) {
 			case 1:
-				int[] array = iniciarArray(12);
+				array = iniciarArray(12);
 				break;
 
 			case 2:
 
+				array = aleatorios();
+				break;
+
 			case 3:
+				mostrar(array);
+				break;
 
 			case 4:
+				int sum = sumar(array);
+				System.out.println("La suma de valores de la array dan como resultado: " + sum);
+				break;
 
 			case 5:
+				
 
 			case 6:
+				System.out.println("El elemento menor esta en la posicion" + posicionMenor(array) + " con el valor " + array[posicionMenor(array)]);
+				break;
 
 			case 7:
+				System.out.print(mezclaAleatoria(array));
+				
+				break;
 
 			}
 		} while (opcion != 8);
@@ -33,6 +49,7 @@ public class menuParaArray {
 
 	}
 
+/*1*/
 	public static int[] iniciarArray(int n) {
 		Scanner input = new Scanner(System.in);
 
@@ -46,8 +63,77 @@ public class menuParaArray {
 		return array;
 	}
 
+
+/*2*/
+	public static int[] aleatorios() {
+		int array[] = new int[12];
+
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 50);
+		}
+		return array;
+	}
+
+
+/*3*/
+	public static String mostrar(int[] array) {
+		String report = "";
+		for (int i = 0; i < array.length; i++) {
+			report += "valor" + i + ":" + array[i] + "\t";
+
+			if (i % 10 == 0)
+				report += "\n";
+
+			System.out.println(array[i]);
+		}
+		return report;
+	}
+
+
+/*4*/
+	public static int sumar(int array[]) {
+		int suma = 0;
+
+		for (int i = 0; i < array.length; i++) {
+
+			suma += array[i];
+		}
+		//System.out.println(suma);
+		return suma;
+	}
+
 	
-	public static int[] 
+/*5*/ 
+// public static int valorMayor (int array[])
+
+
+/*6*/
+	public static int posicionMenor(int[] array) {
+		int menor = 0;
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[menor] < array[i])
+				menor = i;
+		}
+		return menor;
+	}
+
+
+/*7*/
+	public static void mezclaAleatoria(int[] array) {
+
+		for (int i = 0; i < array.length; i++) {
+			int r = (int) (Math.random() * array.length);
+			int auxiliar = array[i];
+			array[i] = array[r];
+			array[r] = auxiliar;
+		}
+
+	}
+
+	
+	
+	
 	
 	
 	public static int menu() {
