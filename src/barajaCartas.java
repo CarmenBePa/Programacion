@@ -36,7 +36,7 @@ public class barajaCartas {
 	}
 	
 	public static String getMezclar(int n) {
-		String[] mezclar = {"Basto","Espada","Oro","Copa"};
+		String[] mezclar = {"Oro","Espadas","Copas","Bastos"};
 		if (n%10 == 0)
 			return mezclar[n/10-1];
 		return mezclar[n/10];
