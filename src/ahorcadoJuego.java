@@ -23,7 +23,7 @@ public class ahorcadoJuego {
 				do {
 					System.out.println("Vidas restantes: " + fallos);
 					System.out.println("Introduce una letra: ");
-					System.out.println("                                 ");
+					System.out.println("                     ");
 					System.out.println(mascara);
 
 					char introducirLetra = input.next().charAt(0); // Esto lee la posicion de la letra que se introduce
@@ -66,7 +66,7 @@ public class ahorcadoJuego {
 				do {
 					System.out.println("Lives : " + fallos);
 					System.out.println("Enter a letter: ");
-					System.out.println("                                 ");
+					System.out.println("                 ");
 					System.out.println(mascaraIngles);
 
 					char introducirLetra = input.next().charAt(0);
