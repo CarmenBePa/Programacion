@@ -9,6 +9,7 @@ public class ahorcadoJuego {
 		int opcion = 0;
 
 		String palabra = palabraSecreta();
+		String palabraIngles = palabraSecretaIngles();
 		int fallos = 6;
 
 		do {
@@ -20,9 +21,6 @@ public class ahorcadoJuego {
 				boolean fin = false;
 
 				do {
-					// System.out.println(palabra); // esto muestra la palabra que es. Acuerdate de
-					// quitarlo
-
 					System.out.println("Vidas restantes: " + fallos);
 					System.out.println("Introduce una letra: ");
 					System.out.println("                                 ");
@@ -56,18 +54,60 @@ public class ahorcadoJuego {
 				if (fallos == 0) {
 					System.out.println("¡Vaya! Has agotado las vidas, has perdido. Intentalo de nuevo");
 				} else {
-					System.out.println("¡Enhorabuena! La palabra oculta era " + palabra + "¡¡Has ganado!!");
+					System.out.println("¡Enhorabuena! La palabra oculta era " + palabra + " ¡¡Has ganado!!");
 				}
 
 				break;
+
+			case 2:
+				char[] mascaraIngles = guionesIngles(palabraIngles);
+				boolean fin2 = false;
+
+				do {
+					System.out.println("Lives : " + fallos);
+					System.out.println("Enter a letter: ");
+					System.out.println("                                 ");
+					System.out.println(mascaraIngles);
+
+					char introducirLetra = input.next().charAt(0);
+
+					boolean letraAcertada = false;
+					for (int i = 0; i < palabraIngles.length(); i++) {
+						if (palabraIngles.charAt(i) == introducirLetra) {
+							mascaraIngles[i] = introducirLetra;
+							letraAcertada = true;
+
+						}
+					}
+
+					if (!letraAcertada && fallos > 0) {
+						imprimirCuerpo(fallos);
+						fallos--;
+					}
+					if (palabraIngles.equals(mascaraStringIngles(mascaraIngles)))
+						fin2 = true;
+					if (fallos == 0)
+						fin2 = true;
+
+				} while (!fin2);
+				if (fallos == 0) {
+					System.out.println("¡Whoops You lose! You have used all the lives. Try again");
+				} else {
+					System.out.println("!Congratulations! The hidden word was " + palabraIngles + "¡¡You win!!");
+				}
+
+				break;
+
 			}
 
-		} while (opcion != 2);
+		} while (opcion != 3);
 		System.out.println("¡Ven a jugar de nuevo! Hasta pronto");
+		System.out.println("¡Come play again!. See you later");
 	}
 
 	public static String palabraSecreta() {
 		String[] diccionario = { "paracaidas", "casa", "perro", "lago", "ordenador", "arena", "marea", "bronceado" };
+
 		String palabra = diccionario[(int) (Math.random() * diccionario.length) * 10 / 10];
 
 		return palabra;
@@ -82,14 +122,44 @@ public class ahorcadoJuego {
 		return mascara;
 	}
 
-	public static String mascaraString(char[] x) {
+	public static String mascaraString(char[] e) {
 		String mascaraString = "";
-		for (int i = 0; i < x.length; i++) {
-			mascaraString += x[i];
+		for (int i = 0; i < e.length; i++) {
+			mascaraString += e[i];
 		}
 		return mascaraString;
 	}
 
+	
+	
+	
+	public static String palabraSecretaIngles() {
+		String[] diccionarioIngles = { "breakfast", "house", "dog", "lake", "computer", "sand", "tide", "speakers" };
+		String palabraIngles = diccionarioIngles[(int) (Math.random() * diccionarioIngles.length) * 10 / 10];
+
+		return palabraIngles;
+	}
+
+	public static char[] guionesIngles(String palabra) { 
+		int letrasPorGuion = palabra.length();
+		char[] mascaraIngles = new char[letrasPorGuion];
+		for (int i = 0; i < mascaraIngles.length; i++) {
+			mascaraIngles[i] = '-';
+		}
+		return mascaraIngles;
+	}
+
+	public static String mascaraStringIngles(char[] ingles) {
+		String mascaraStringIngles = "";
+		for (int i = 0; i < ingles.length; i++) {
+			mascaraStringIngles += ingles[i];
+		}
+		return mascaraStringIngles;
+	}
+
+	
+	
+	
 	public static int menu() {
 
 		Scanner input = new Scanner(System.in);
@@ -98,8 +168,9 @@ public class ahorcadoJuego {
 		System.out.println("Juego del ahorcado      ||     |         ");
 		System.out.println("                        ||     O         ");
 		System.out.println("1.- Jugar en Español    ||    /|\\       ");
-		System.out.println("2.- Salir               ||    / \\       ");
-		System.out.println("Tu eleccion             ||_________      ");
+		System.out.println("2.- Jugar en Ingles     ||    / \\       ");
+		System.out.println("3.- Salir               ||_________      ");
+		System.out.println(" Tu eleccion            ||        ||     ");
 		System.out.println("                        ||        ||     ");
 		System.out.println("_______________________");
 		int opcion = input.nextInt();
