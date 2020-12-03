@@ -53,7 +53,8 @@ public class ahorcadoJuego {
 				} while (!fin);
 				if (fallos == 0) {
 					System.out.println("¡Vaya! Has agotado las vidas, has perdido. Intentalo de nuevo");
-				} else {
+				} 
+				else {
 					System.out.println("¡Enhorabuena! La palabra oculta era " + palabra + " ¡¡Has ganado!!");
 				}
 
@@ -101,8 +102,8 @@ public class ahorcadoJuego {
 			}
 
 		} while (opcion != 3);
-		System.out.println("¡Ven a jugar de nuevo! Hasta pronto");
-		System.out.println("¡Come play again!. See you later");
+		System.out.println("¡Ven a jugar de nuevo! Hasta pronto.");
+		System.out.println("¡Come play again!. See you later.");
 	}
 
 	public static String palabraSecreta() {
