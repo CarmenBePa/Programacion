@@ -130,8 +130,6 @@ public class ahorcadoJuego {
 		}
 		return mascaraString;
 	}
-
-	
 	
 	
 	public static String palabraSecretaIngles() {
@@ -241,7 +239,7 @@ public class ahorcadoJuego {
 			System.out.println("| |/ /       ||                 ");
 			System.out.println("| | /        ||                 ");
 			System.out.println("| |/      ---------             ");
-			System.out.println("| |      |  ·   ·  | 	        ");
+			System.out.println("| |      |   ·   · | 	        ");
 			System.out.println("| |      |    -    |            ");
 			System.out.println("| |       ---------             ");
 			System.out.println("| |         | |                 ");
@@ -269,7 +267,7 @@ public class ahorcadoJuego {
 			System.out.println("| |/ /       ||                 ");
 			System.out.println("| | /        ||                 ");
 			System.out.println("| |/      ---------             ");
-			System.out.println("| |      |  ·   ·  |            ");
+			System.out.println("| |      | ·   ·   |            ");
 			System.out.println("| |      |    O    |            ");
 			System.out.println("| |       ---------             ");
 			System.out.println("| |         | |                 ");
@@ -337,8 +335,8 @@ public class ahorcadoJuego {
 			System.out.println("| |        || ||              ");
 			System.out.println("| |       / | | \\            ");
 			System.out.println("| |                           ");
-			System.out.println("| |______          __________ ");
-			System.out.println("|-|______          _______|-| ");
+			System.out.println("| |______            ________ ");
+			System.out.println("|-|______            _____|-| ");
 			System.out.println("| |       \\   \\         | | ");
 			System.out.println("| |        \\   \\        | | ");
 			System.out.println("| |         \\   \\       | | ");

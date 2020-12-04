@@ -39,7 +39,7 @@ public class menuParaArray {
 				break;
 
 			case 7:
-				System.out.print(mezclaAleatoria(array));
+				System.out.println();
 				
 				break;
 

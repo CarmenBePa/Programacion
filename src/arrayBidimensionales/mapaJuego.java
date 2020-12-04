@@ -12,7 +12,7 @@ public class mapaJuego {
 		int dimension = input.nextInt();  // esto determinara la dimension del mapa.
 		
 		int[][] mapa = crearMapa(dimension);
-		
+		jugador(mapa);
 		System.out.println(mapaString(mapa));
 		
 		
@@ -42,17 +42,18 @@ public class mapaJuego {
 	
 	// para acabar el juego, hay que llegar a una posicion ganadora, que se decidira automaticamente.
 	
-	public static int[][] jugador (int[][] j) {
-		int pj = 5;
-		int posicion = dimension/2;
-		for (int f = 0; f<posicion; f++)
-			for(int c = 0; c<posicion; c++)
+	public static void jugador (int[][] m) { // la "m" es el mapa, por tanto es lo que se va a visualizar
 
+		int y=0;
+		int x=0;
+		y=m.length/2;
+		m[y][y]=5;
 		
-		return null;
 	}
 	
 	
+
+
 	
 	
 	
