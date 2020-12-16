@@ -19,6 +19,7 @@ public class ahorcadoJuego {
 			case 1:
 				char[] mascara = guiones(palabra); // palabraGuiones
 				boolean fin = false;
+				System.out.println("¡Vamos a jugar en Español!");
 
 				do {
 					System.out.println("Vidas restantes: " + fallos);
@@ -63,6 +64,7 @@ public class ahorcadoJuego {
 			case 2:
 				char[] mascaraIngles = guionesIngles(palabraIngles);
 				boolean fin2 = false;
+				System.out.println("Let`s play in English!");
 
 				do {
 					System.out.println("Lives : " + fallos);

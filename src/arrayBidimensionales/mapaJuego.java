@@ -43,7 +43,6 @@ public class mapaJuego {
 	// para acabar el juego, hay que llegar a una posicion ganadora, que se decidira automaticamente.
 	
 	public static void jugador (int[][] m) { // la "m" es el mapa, por tanto es lo que se va a visualizar
-
 		int y=0;
 		int x=0;
 		y=m.length/2;
@@ -51,7 +50,15 @@ public class mapaJuego {
 		
 	}
 	
-	
+	                                 
+	public static void jugar (int [][] mapa, int ) {
+		
+		
+		
+		
+		
+		return (Integer) null;
+	}
 
 
 	
