@@ -51,13 +51,13 @@ public class mapaJuego {
 	}
 	
 	                                 
-	public static void jugar (int [][] mapa, int ) {
+	public static void jugar (int [][] mapa, int c) {
+	
 		
 		
 		
 		
-		
-		return (Integer) null;
+		//return (Integer) null;
 	}
 
 
