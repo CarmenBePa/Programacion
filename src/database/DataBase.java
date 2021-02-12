@@ -9,23 +9,18 @@ public class DataBase {
 	
 	protected Connection con;
 	
-	private String usuario;
-	private String password;
+	private String url;
+	private String user;
+	private String pass;
 	
-	public DataBase() throws Exception{
-		this("root","");
-		
-	}
-	public DataBase(String usuario, String pass) throws Exception {
-		
-		this.usuario = usuario;
-		this.password = pass;
-		String sURL = "jdbc:mysql://localhost/mychat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-		con = DriverManager.getConnection(sURL,this.usuario,this.password);
-	}
+		public DataBase() throws Exception {
+			con = null;
+			url = "jdbc:mysql://localhost:3306/email";
+			user = "root";
+			pass = "";
+			con = DriverManager.getConnection(url,user,pass);
+		}
 	
-	public Connection getCon() {
-		return con;
-	}
+	
 	
 }
