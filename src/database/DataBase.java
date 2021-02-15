@@ -21,6 +21,14 @@ public class DataBase {
 			con = DriverManager.getConnection(url,user,pass);
 		}
 	
+		public DataBase(String url, String user, String pass) throws Exception {
+			con = null;
+			this.url = user;
+			this.user =user;
+			this.pass = pass;
+			con = DriverManager.getConnection(url,user,pass);
+		}
+	
 	
 	
 }
