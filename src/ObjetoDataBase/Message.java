@@ -12,6 +12,8 @@ public class Message {
 		this.idDestino = des;
 		this.nuevo = nuevo;
 	}
+	
+	 
 
 	public String getText() {
 		return text;
