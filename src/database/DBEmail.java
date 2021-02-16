@@ -1,6 +1,7 @@
 package database;
 
 import ObjetoDataBase.User;
+import ObjetoDataBase.Message;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -22,6 +23,27 @@ public class DBEmail extends DataBase {
 			u = new User(result.getInt("id_usuario"),result.getString("usuario"),result.getString("Pass"));
 		return u;
 	}
+	
+	public ArrayList<Message> getMessage(User u) throws Exception {
+		ArrayList<Message> message = new ArrayList<Message>();
+		String sql = "Select * from mensajes where id_destino = '" + u.getId() + "'" ;
+		ResultSet result = this.stm.executeQuery(sql);
+		
+		while (result.next()) {
+			
+		}
+
+		
+	}
+	
+	public Message getMessage(int id) throws Exception {
+		
+		String sql = "SELECT * FROM mensajes WHERE id_destino = '" + id;
+	
+		ResultSet result = this.stm.executeQuery(sql);
+	
+			 
+	}
 
 	
 	public boolean newUser(String name, String pass) throws Exception{
@@ -34,6 +56,7 @@ public class DBEmail extends DataBase {
 			return false;
 		}
 	}
+	
 	
 	
 	
