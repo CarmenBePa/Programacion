@@ -21,9 +21,9 @@ public class TestDataBase {
 				case 1: 
 					user = login(db);
 						if (user != null) 
-							insideSystem(db,user);
+							//insideSystem(db,user);
 						
-						else
+						//else
 							System.out.println("You have to register");
 						break;
 						
@@ -104,8 +104,9 @@ public class TestDataBase {
 		String pass = input.next();
 		return db.newUser(name, pass);
 	}
+}
 	
-	public static void insideSystem(DBEmail db, User user) throws Exception {//throws Exception
+	/*public static void insideSystem(DBEmail db, User user) throws Exception {//throws Exception
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Welcolme " + user);
@@ -136,6 +137,6 @@ public class TestDataBase {
 		for (int i=0;i<mensajes.size();i++)
 			tex+="\n"+mensajes.get(i)+"  "+db.getUserById((mensajes.get(i).getIdRemite()));
 		return tex;
-	}
+	}*/
 
-}
+//}

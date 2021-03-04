@@ -75,6 +75,9 @@ public class DBEmail extends DataBase {
 		try {
 			this.stm.execute(sql);
 		}
+		catch(Exception ex) {
+			System.out.println("RED CODE. ERROR");
+		}
 		return ok;
 	}
 }
