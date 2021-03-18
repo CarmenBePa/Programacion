@@ -7,7 +7,7 @@ import database.DBEmail;
 
 public class TestProtectora {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
 		ProtectoraDB db = new ProtectoraDB();
@@ -35,7 +35,8 @@ public class TestProtectora {
 					break;
 			}
 				
-		}while(op!=4);
+		}while(op!=3);
+		System.out.println("Vuelve pronto!.");
 		
 	}
 	
@@ -80,6 +81,17 @@ public class TestProtectora {
 		u = db.getUser(name, pass);
 		return u;
 				
+	}
+	
+	public static boolean newUser(ProtectoraDB bd) throws Exception {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Datos personales: ");
+		System.out.print("Introduce tu nombre: ");
+		String name = input.next().toUpperCase();
+		System.out.print("Introduce tu contraseña: ");
+		String pass = input.next();
+		return bd.newUser(name, pass);
 	}
 	
 	private static void insideSystem(ProtectoraDB db, User user) {

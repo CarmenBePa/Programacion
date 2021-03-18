@@ -34,5 +34,10 @@ protected Connection con;
 			return null;
 		}
 
+		public boolean newUser(String name, String pass2) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
 		
 }

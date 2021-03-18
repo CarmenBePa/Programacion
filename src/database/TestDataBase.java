@@ -93,7 +93,6 @@ public class TestDataBase {
 				
 	}
 	
-	
 	public static boolean newUser(DBEmail db) throws Exception {
 		Scanner input = new Scanner(System.in);
 		
